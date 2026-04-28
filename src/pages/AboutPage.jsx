@@ -43,12 +43,19 @@ export function AboutPortalPage() {
             </p>
           </div>
 
-          <div className="card card-pad">
-            <div className="section-hdr">Version</div>
-            <div className="info-row"><span className="info-label">Version</span><span className="info-val">3.0.0>
-            <div className="info-row" style={{ border: 'none' }}><span className="info-label">Developed by</span><span style={{ color: '#a5b4fc', fontWeight: 700 }}>Zanteria D Wells</span></div>
-          </div>
-        </div>
+         <div className="card card-pad">
+  <div className="section-hdr">Version</div>
+
+  <div className="info-row">
+    <span className="info-label">Version</span>
+    <span className="info-val">3.0.0</span>  {/* ← add closing span here */}
+  </div>
+
+  <div className="info-row" style={{ border: 'none' }}>
+    <span className="info-label">Developed by</span>
+    <span style={{ color: '#a5b4fc', fontWeight: 700 }}>Zanteria D Wells</span>
+  </div>
+</div>
 
         <div className="card card-pad">
           <div className="section-hdr">Modules</div>
