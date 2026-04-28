@@ -48,7 +48,7 @@ export function AboutPortalPage() {
 
   <div className="info-row">
     <span className="info-label">Version</span>
-    <span className="info-val">3.0.0</span>  {/* ← add closing span here */}
+    <span className="info-val">3.0.0</span>
   </div>
 
   <div className="info-row" style={{ border: 'none' }}>
