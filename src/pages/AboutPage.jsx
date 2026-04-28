@@ -36,6 +36,7 @@ export function AboutPortalPage() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 20, alignItems: 'start' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+
           <div className="card card-pad">
             <div className="section-hdr">Overview</div>
             <p style={{ color: 'var(--muted)', fontSize: 14, lineHeight: 1.8, margin: 0 }}>
@@ -43,28 +44,28 @@ export function AboutPortalPage() {
             </p>
           </div>
 
-         <div className="card card-pad">
-  <div className="section-hdr">Version</div>
-
-  <div className="info-row">
-    <span className="info-label">Version</span>
-    <span className="info-val">3.0.0</span>
-  </div>
-
-  <div className="info-row" style={{ border: 'none' }}>
-    <span className="info-label">Developed by</span>
-    <span style={{ color: '#a5b4fc', fontWeight: 700 }}>Zanteria D Wells</span>
-  </div>
-</div>
-
-        <div className="card card-pad">
-          <div className="section-hdr">Modules</div>
-          {portalModules.map(([name, desc, color], idx) => (
-            <div key={name} style={{ padding: '12px 0', borderBottom: idx === portalModules.length - 1 ? 'none' : `1px solid ${color}22` }}>
-              <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 4, color }}>{name}</div>
-              <div style={{ color: 'var(--muted)', fontSize: 13, lineHeight: 1.65 }}>{desc}</div>
+          <div className="card card-pad">
+            <div className="section-hdr">Version</div>
+            <div className="info-row">
+              <span className="info-label">Version</span>
+              <span className="info-val">3.0.0</span>
             </div>
-          ))}
+            <div className="info-row" style={{ border: 'none' }}>
+              <span className="info-label">Developed by</span>
+              <span style={{ color: '#a5b4fc', fontWeight: 700 }}>Zanteria D Wells</span>
+            </div>
+          </div>  {/* ← this closing div was missing! */}
+
+          <div className="card card-pad">
+            <div className="section-hdr">Modules</div>
+            {portalModules.map(([name, desc, color], idx) => (
+              <div key={name} style={{ padding: '12px 0', borderBottom: idx === portalModules.length - 1 ? 'none' : `1px solid ${color}22` }}>
+                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 4, color }}>{name}</div>
+                <div style={{ color: 'var(--muted)', fontSize: 13, lineHeight: 1.65 }}>{desc}</div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </div>
